@@ -22,17 +22,17 @@ abstract class PersistModelAbstract
     {
          
         // Inicio de conexão com SQLite     
-        $this->o_db = new PDO("sqlite:./databases/db.sq3");
-        $this->o_db->setAttribute ( PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION );
+        //$this->o_db = new PDO("sqlite:./databases/db.sq3");
+        //$this->o_db->setAttribute ( PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION );
         // Fim de conexão com SQLite
           
          
-        /*
+
         //Inicio de conexão com MySQL 
-        $st_host = 'ip ou host';
-        $st_banco = 'bancodedados';
-        $st_usuario = 'usuario';
-        $st_senha = 'senha';
+        $st_host = '127.0.0.1';
+        $st_banco = 'mvcagenda';
+        $st_usuario = 'root';
+        $st_senha = '';
          
           
         $st_dsn = "mysql:host=$st_host;dbname=$st_banco"; 
@@ -43,7 +43,7 @@ abstract class PersistModelAbstract
             $st_senha
         );
         //Fim de conexão com MySQL
-        */ 
+
     }
 }
 ?>

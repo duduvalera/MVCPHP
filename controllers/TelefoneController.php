@@ -64,7 +64,7 @@ class TelefoneController
                 Application::redirect('?controle=Telefone&acao=listarTelefones&in_con='.$o_contato->getId());
         }
              
-        $o_view = new View('views/manterTelefone.phtml');
+        $o_view = new View('views/manterTelefone.php');
         $o_view->setParams(array('o_contato' => $o_contato,'o_telefone' => $o_telefone));
         $o_view->showContents();
     }
