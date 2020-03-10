@@ -9,11 +9,19 @@
 * Essa função garante que todas as classes 
 * da pasta lib serão carregadas automaticamente
 */
-function __autoload($st_class)
-{
+
+// function __autoload($st_class)
+// {
+//     if(file_exists('lib/'.$st_class.'.php'))
+//         require_once 'lib/'.$st_class.'.php';
+// }
+
+spl_autoload_register(function($st_class) {
     if(file_exists('lib/'.$st_class.'.php'))
-        require_once 'lib/'.$st_class.'.php';
-}
+    {
+        require_once 'lib/'.$st_class.'.php';    
+    }
+});
  
 /**
 * Verifica qual classe controlador (Controller) o usuário deseja chamar
