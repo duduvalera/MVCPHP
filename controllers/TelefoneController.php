@@ -32,7 +32,7 @@ class TelefoneController
                  
                 $o_telefone = new TelefoneModel();
                 $v_telefones = $o_telefone->_list($_GET['in_con']);
-                $o_view = new View('views/listarTelefones.phtml');
+                $o_view = new View('views/listarTelefones.php');
                 $o_view->setParams(array('o_contato' => $o_contato,'v_telefones' => $v_telefones));
                 $o_view->showContents();
             }

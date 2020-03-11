@@ -65,7 +65,7 @@ class ContatoController
                 Application::redirect('?controle=Contato&acao=listarContato');
         }
               
-        $o_view = new View('views/manterContato.phtml');
+        $o_view = new View('views/manterContato.php');
         $o_view->setParams(array('o_contato' => $o_contato));
         $o_view->showContents();
     }
